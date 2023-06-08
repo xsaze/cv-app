@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:ital,wght@0,400;0,500;1,400&display=swap');
+
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  font-family: 'Wix Madefor Text', sans-serif;
+  font-weight: 400;
+}
+
+.section-container {
+  display: flex;
+  width: 100vw;
+  justify-content: space-evenly;
+}
+
+.section {
+  display: flex;
+  gap: 20px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  max-height: 560px;
+  overflow: auto;
+  width: 280px;
+  font-size: 22px;
+  gap: 12px;
+  padding-left:2px;
+  padding-right:2px;
+}
+
+.column > * {
+  font-size: 14px;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.header {
+  font-size: 36px;
+}
+
+.preview {
+  display: flex;
+  height: 520px;
+  width: 368px;
+  border-style: solid;
+  border-width: 1px;
+  font-size: 10px;
+}
+
+.preview-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  color: white;
+  background-color: rgb(30, 65, 120);
+  height: 100%;
+  width: 40%;
+  text-align: start;
+}
+
+.preview-left div {
+  width: 134px;
+}
+
+.preview-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  
+}
+
+.preview-img img {
+  width: 75%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+}
+
+.preview-header {
+  font-size: 14px;
+  border-bottom: solid 2px;
+  font-weight:500;
+  
+}
+
+.preview-left-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.preview-edu-card {
+  padding: 6px;
+  padding-right:0;
+  border-left:solid;
+  border-left-width:1px;
+  width: 127px !important;
+  background-color: rgb(1, 37, 77);
+}
+
+.preview-edu-card .from-to {
+  font-size:9px;
+}
+
+.preview-edu-card .degree {
+  font-size:9px;
+}
+
+.preview-edu-card .subject {
+  font-size:11px;
+  font-weight: 500;
+  line-height:1.2;
+}
+
+.preview-edu-card .university {
+  font-size:11px;
+}
+
+.preview-edu-card .city {
+  font-size:9px;
+  font-style: italic;
+}
+
+.preview-right {
+  display: flex;
+  flex-direction: column;
+  height: 96%;
+  width: 54%;
+  padding-right:3%;
+  padding-left:3%;
+  padding-top:4%;
+  text-align:start;
+  color: rgb(1, 37, 77);
+}
+
+.preview-right .name {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.preview-right .firstName {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.preview-right .lastName {
+  font-size: 18px;
+}
+
+.preview-right .about {
+  overflow-wrap:break-word;
+  color: rgb(30, 65, 120);
+  width: 100%;
+}
+
+.preview-title {
+  margin-bottom: 12px;
+}
+
+.preview-experience {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+}
+
+.preview-exp-card {
+  border-left: 2px double rgb(44, 116, 232);
+  padding-left: 4px; 
+}
+
+.preview-exp-card .company {
+  font-size:14px;
+}
+
+.preview-exp-card .position {
+  font-size:12px;
+  font-weight: 500;
+}
+
+.preview-exp-card .city {
+  font-style: italic;
+}
+
+
+
+#img-upload {
+  cursor: pointer;
+}
+
+#img-upload:hover {
+  font-weight: 500;
+}
+
+.card {
+  position: relative;
+  background-color: rgb(251, 251, 255);
+  border-style:solid;
+  border-width: 2px;
+  border-color: rgb(87, 116, 191);
+}
+
+.card:hover .popup-btn {
+  visibility: visible;
+
+}
+
+.card .popup-btn {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.popup-delete {
+  background-color: red;
+  border-radius: 8px;
+}
+
+.popup-delete:hover {
+  filter:brightness(80%);
+}
+
+.popup-edit {
+  background-color: yellow;
+  border-radius: 8px;
+}
+
+.popup-edit:hover {
+  filter:brightness(80%);
+}
+
+.edit-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 99;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.50);
+  backdrop-filter: blur(2px);
+}
+
+textarea {
+  resize: none;
+  height: 160px;
+}
+
+.hidden {
+  display: none;
+}
+
+input, textarea, select {
+  padding:6px;
+  border:solid 1px rgb(87, 116, 191);
+  background-color: rgb(249, 250, 255);
+  border-radius: 8px;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline:solid 1px rgb(0, 35, 115);
+}
+
+.add-btn {
+  cursor: pointer;
+  padding:4px;
+  width: 60px;
+  border:solid 1px rgb(87, 116, 191);
+  background-color: rgb(249, 250, 255);
+  border-radius: 16px;
+}
+
+.add-btn:hover {
+  background-color: rgb(240, 242, 255);
+}
+
+.add-btn:active {
+  background-color: rgb(87, 116, 191);
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.menu-btn {
+  cursor: pointer;
+  padding:4px;
+  width: 100px;
+  border:solid 1px rgb(87, 116, 191);
+  background-color: rgb(249, 250, 255);
+  border-radius: 16px;
+}
+
+.menu-btn:hover {
+  background-color: rgb(240, 242, 255);
+}
+
+.menu-btn:active {
+  background-color: rgb(87, 116, 191);
+}
